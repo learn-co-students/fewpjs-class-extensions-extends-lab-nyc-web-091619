@@ -59,6 +59,9 @@ class Triangle extends Polygon {
         let B = this.sides[1]
         let C = this.sides[2]
 
+        // alternative syntax to assign variables: via HTCicek 
+        // const [A, B, C] = this.sides;
+
         // If any side is less than zero, rejecteroonie. 
         if (A <= 0) return;
         if (B <= 0) return;
@@ -104,6 +107,8 @@ class Square extends Polygon {
         // 
         // We use array[0] (and don't iterate) since every value has to be equal.
         return this.sides.every((value, index, array) => value === array[0])
+        // alternative syntax via: HTCicek 
+        // return this.sides.every(side => side === this.sides[0]);
     }
 
     get area() {
@@ -113,7 +118,7 @@ class Square extends Polygon {
         if (this.count !== 4) return;
         
         // return this.sides[0] * this.sides[0]
-        
+
         return this.sides[0]**2 
     }
 
